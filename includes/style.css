@@ -1,0 +1,164 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+.full-height {
+  height: 80%;
+}
+body{
+  font-family
+}
+.navegacao{
+  width: 100%;
+}
+nav{
+  background: black;
+  height: 80px;
+  width: 100%;
+}
+label.logo a{
+  color: white;
+  font-size: 40px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+a.active,a:hover{
+  border: 1px solid white;
+  transition: .5s;
+}
+label #btn,
+label #cancel{
+  color: white;
+  font-size: 30px;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+.wrapper{
+  margin: 30px auto;
+  width: 90%;
+}
+.imagens_frontpage{
+  border: 3px solid black;
+  overflow: hidden;
+  width: 33%;
+  height: 800px;
+  display: inline-block;
+}
+.limite a img{
+  filter: blur(5px);
+  -webkit-filter: blur(1.5px);
+  transition: .3s;
+  width: 100%;
+  height: 100%;
+}
+.limite a img:hover{
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.limite a span {
+  font-size: 40px;
+  color: black;
+}
+.centered {
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+  font-size: 43;
+  font-family: Verdana;
+  text-align: center;
+  top: 50%;
+  width: 30%;
+  height: 100%;
+  left: 50%;
+  transform: translate(-45%, -55%);
+}
+@media (max-width: 952px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 909px){
+  label #btn{
+    display: block;
+  }
+  label.logo{
+    color: white;
+    font-size: 20px;
+    line-height: 80px;
+    padding: 0 30px;
+    font-weight: bold;
+  }
+  ul{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  .imagens_frontpage{
+    border: 3px solid black;
+    overflow: hidden;
+    width: 32%;
+    height: 200px;
+    display: inline-block;
+  }
+  a:hover,a.active{
+    background: none;
+    color: white;
+  }
+  nav ul.show{
+    left: 0;
+  }
+  #check:checked ~ ul{
+    left: 0;
+     z-index: 1;
+  }
+  #check:checked ~ label #btn{
+    display: none;
+  }
+  #check:checked ~ label #cancel{
+    display: block;
+  }
+}
